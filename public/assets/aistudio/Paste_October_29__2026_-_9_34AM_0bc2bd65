@@ -1,0 +1,874 @@
+# NEXUS CITY — ULTIMATE 3D OPEN WORLD
+## Google AI Studio uchun maksimal darajadagi to‘liq loyiha prompti
+
+Sen katta tajribaga ega senior full-stack dasturchi, Three.js/WebGL muhandisi, 3D game developer, UI/UX dizayner va dasturiy arxitektor sifatida ishlaysan.
+
+Menga **NEXUS CITY** nomli, zamonaviy AAA open-world o‘yinlaridan ilhomlangan, 3D realistik, interaktiv va imkon qadar to‘liq ishlaydigan brauzer o‘yinini yaratib ber.
+
+Bu oddiy landing page, statik maket yoki faqat tugmalardan iborat demo bo‘lmasin. Foydalanuvchi shahar ichida harakatlana olishi, mashina haydashi, topshiriqlarni bajarishi, pul topishi, transport vositalarini ochishi va o‘z rivojlanishini saqlashi mumkin bo‘lgan o‘ynaladigan 3D o‘yin bo‘lsin.
+
+Barcha funksiyalarni haqiqiy texnik imkoniyatlarga mos ravishda amalga oshir. Ishlamaydigan funksiyalarni ishlaydi deb ko‘rsatma. Avval kichik, lekin to‘liq ishlaydigan versiyani yarat, so‘ng qolgan tizimlarni unga integratsiya qil.
+
+---
+
+# 1. LOYIHANING ASOSIY MAQSADI
+
+Loyiha nomi: NEXUS CITY
+
+Janr: 3D Open World / City Life / Driving / Exploration / Missions
+
+Vizual uslub: fotorealistik 3D, zamonaviy megapolis, cinematic lighting, PBR materiallar, realistik kamera va silliq animatsiyalar.
+
+Platformalar:
+- Windows va macOS kompyuterlarida zamonaviy brauzer.
+- Android telefonlar.
+- iPhone va iPad brauzerlari.
+- Sichqoncha, klaviatura va sensorli ekran.
+
+Asosiy interfeys tillari:
+- O‘zbek tili.
+- Ingliz tili.
+- Rus tili.
+
+Rejimlar:
+- Light Mode.
+- Dark Mode.
+
+Bosh maqsad: foydalanuvchiga erkin harakatlanish, shaharni o‘rganish, mashina boshqarish, missiyalar bajarish va o‘z o‘yin profilini rivojlantirish imkonini berish.
+
+# 2. TEXNOLOGIK STACK
+
+Quyidagi texnologiyalardan foydalan:
+
+- React — interfeys va komponentlar.
+- TypeScript — xavfsizroq va tartibli kod.
+- Vite — development server va production build.
+- Three.js — 3D renderlash.
+- React Three Fiber — React ichida 3D sahna boshqaruvi.
+- @react-three/drei — kamera, boshqaruv va yordamchi 3D komponentlar.
+- Zustand — o‘yin holati va UI state boshqaruvi.
+- @react-three/rapier — kerakli obyektlar uchun fizik simulyatsiya.
+- Lucide React — interfeys ikonkalari.
+- localStorage yoki IndexedDB — mahalliy o‘yin progressini saqlash.
+
+Versiyalarni o‘zaro mos tanla. O‘rnatilgan paketlarning mavjud API’laridan foydalan. Paketlar ishlamasa, mos alternativani tanla va sababini hujjatlashtir.
+
+Barcha texnologiyalarni bitta faylga tiqishtirma. Kodni komponentlar, tizimlar va ma’lumotlar qatlamlariga ajrat.
+
+# 3. 3D SHAHAR DIZAYNI
+
+Haqiqiy megapolis taassurotini beradigan o‘yin dunyosini yarat.
+
+Shahar tarkibida quyidagilar bo‘lsin:
+
+- Baland osmono‘par binolar.
+- Turar joylar.
+- Zamonaviy ofis binolari.
+- Do‘konlar va savdo markazlari.
+- Keng ko‘chalar va chorrahalar.
+- Piyodalar yo‘laklari.
+- Parklar va daraxtlar.
+- Ko‘priklar va yerosti yo‘llari uchun kamida kengaytiriladigan arxitektura.
+- Avtoturargohlar.
+- Yoqilg‘i quyish shoxobchasi.
+- Avtosalon.
+- O‘yinchi boshlang‘ich uyi.
+- Missiya boshlanadigan nuqtalar.
+- Shahar xaritasida muhim joylarni bildiradigan belgilar.
+
+Shaharni bitta ulkan geometrik obyekt sifatida yaratma. Uni alohida hududlar va qayta foydalaniladigan modullardan tuz.
+
+Hududlar:
+1. Downtown — markaziy osmono‘par binolar.
+2. Residential District — uylar va turar joylar.
+3. Industrial Zone — omborlar va zavodlar.
+4. Green Park — park va dam olish zonasi.
+5. Highway District — tez yurish uchun keng yo‘llar.
+6. Commercial District — do‘konlar va avtosalonlar.
+
+Dastlab shaharni kichikroq, ammo to‘liq o‘ynaladigan hudud sifatida yarat. Keyin yangi hududlar qo‘shish oson bo‘lsin.
+
+Bino fasadlari, yo‘l belgilari, svetoforlar, derazalar, yoritgichlar va asfalt materiallarini turli tekstura hamda materiallardan tuz. Takrorlanuvchi binolar bir xil ko‘rinib qolmasligi uchun rang, balandlik va shakl variantlarini ishlat.
+
+Tashqi 3D modellar mavjud bo‘lmasa, sifatli procedural geometriya yarat. Mavjud bo‘lmagan tashqi assetlarni bor deb ko‘rsatma.
+
+# 4. ASOSIY 3D SAHNA
+
+Three.js yordamida haqiqiy real-time 3D sahna yarat.
+
+Talablar:
+- Perspective camera.
+- Antialiasing imkoniyati.
+- PBR materiallar.
+- Ambient lighting.
+- Directional light.
+- Shadow mapping.
+- Fog va atmospheric depth.
+- Sky va horizon.
+- Asfalt, beton, metall, shisha va daraxt materiallari.
+- Dynamic time-of-day.
+- Kamera masofasi va ko‘rish burchagini sozlash.
+- FPS ko‘rsatkichi mavjud bo‘lgan diagnostika paneli.
+
+Kompyuterda sifatli soyalar va yuqori aniqlik ishlatilishi mumkin. Telefonlarda esa qurilma imkoniyatiga qarab render resolution, shadow map va obyektlar sonini kamaytir.
+
+Agar qurilma WebGL’ni qo‘llab-quvvatlamasa yoki GPU xotirasi yetarli bo‘lmasa, foydalanuvchiga tushunarli xabar ko‘rsat.
+
+# 5. O‘YINCHI QAHRAMONI
+
+O‘yinchi shahar ichida boshqariladigan uchinchi shaxs qahramoniga ega bo‘lsin.
+
+Qahramon xususiyatlari:
+- 3D humanoid model yoki vaqtinchalik sifatli procedural character.
+- Yurish animatsiyasi.
+- Yugurish animatsiyasi.
+- To‘xtash animatsiyasi.
+- Burilish va yo‘nalishni o‘zgartirish.
+- Mashinaga kirish va undan chiqish.
+- Harakat paytida kamera kuzatuvi.
+- Yer sathiga moslashish.
+- To‘siqlarga qarshi collision.
+
+Agar tashqi animatsion model mavjud bo‘lmasa, o‘yinchi harakatlanishini procedural animatsiya bilan ta’minla. Qahramon faqat joyidan siljiydigan statik haykal bo‘lib qolmasin.
+
+# 6. KOMPYUTER BOSHQARUVI
+
+Quyidagi klaviatura boshqaruvlarini to‘liq amalga oshir:
+
+- W — oldinga yurish.
+- S — orqaga yurish.
+- A — chapga yurish.
+- D — o‘ngga yurish.
+- Shift — yugurish.
+- Space — sakrash, agar sakrash tizimi mavjud bo‘lsa.
+- E — mashinaga kirish yoki undan chiqish.
+- F — yaqin interaktiv obyekt bilan ishlash.
+- M — xaritani ochish.
+- I — inventarni ochish.
+- J — missiyalar oynasini ochish.
+- Escape — menyuni ochish yoki o‘yinni pauzaga qo‘yish.
+- V — kamera rejimini almashtirish.
+- Tab — topshiriqlar va holat panelini ko‘rsatish/yashirish.
+
+Boshqaruvlar input conflict keltirib chiqarmasin. Input fokusida matn maydoni ochiq bo‘lsa, o‘yin klaviatura tugmalarini harakat sifatida qabul qilmasin.
+
+O‘yin pauzada bo‘lsa, qahramon va transport boshqaruvi to‘xtasin.
+
+# 7. TELEFON BOSHQARUVI
+
+Mobil qurilmalar uchun qulay va professional touch UI yarat.
+
+Chap tomonda:
+- Virtual joystick.
+- Harakat yo‘nalishi.
+- Sezgirlikni sozlash.
+
+O‘ng tomonda:
+- Yugurish tugmasi.
+- Sakrash tugmasi, agar faol bo‘lsa.
+- Interaction tugmasi.
+- Mashinaga kirish/chiqish tugmasi.
+- Kamera boshqaruvi.
+
+Mashina boshqaruvida:
+- Rul boshqaruvi.
+- Gaz.
+- Tormoz.
+- Orqaga yurish.
+- Kamera almashtirish.
+
+Touch boshqaruvlar barmoq bilan ishlatishga qulay, katta va bir-biridan yetarli masofada bo‘lsin.
+
+`pointerdown`, `pointermove`, `pointerup` va `pointercancel` holatlarini to‘g‘ri boshqar. Barmoq ekrandan chiqib ketganda tugma bosilgan holatda qolib ketmasin.
+
+Mobil brauzerda tasodifiy sahifa aylanishi yoki zoom sodir bo‘lmasligi uchun faqat o‘yin boshqaruvi zonasida zarur touch xatti-harakatlarini chekla. Interfeysning boshqa qismlarida oddiy scroll ishlashda davom etsin.
+
+# 8. UCHINCHI SHAXS KAMERA
+
+Kamera o‘yinchini orqa tomondan kuzatsin.
+
+Talablar:
+- Smooth follow.
+- Kamera tezlanishiga yumshoq moslashish.
+- Sichqoncha bilan ko‘rish yo‘nalishini boshqarish.
+- Mobil qurilmada barmoq bilan kamerani burish.
+- Binolar yoki boshqa obyektlar kamerani to‘sib qo‘yganda kamerani to‘g‘ri joylashtirish.
+- Kamera qahramon ichiga kirib ketmasligi.
+- Mashina ichida yoki tashqarisida turli kamera rejimlari.
+- Birinchi shaxs rejimi ixtiyoriy qo‘shimcha funksiya sifatida.
+
+Kamera harakati keskin sakrashlar bilan emas, silliq interpolatsiya yordamida bajarilsin.
+
+# 9. MASHINALAR TIZIMI
+
+Shaharda boshqariladigan transport vositalari bo‘lsin.
+
+Birinchi versiyada kamida uchta farqli avtomobil:
+1. Oddiy shahar sedani.
+2. Sport avtomobili.
+3. SUV.
+
+Har bir mashina uchun:
+- Alohida 3D model.
+- Turli tezlanish.
+- Turli maksimal tezlik.
+- Turli tormoz kuchi.
+- Burilish tezligi.
+- G‘ildiraklarning vizual aylanishi.
+- Faralar.
+- Tormoz chiroqlari.
+- Mashina kamerasi.
+- To‘qnashuvni aniqlash.
+- Avtomobilni qayta joylashtirish imkoniyati.
+
+Mashina harakati faqat modelning joylashuvini o‘zgartirishdan iborat bo‘lmasin. Tezlik, burilish, tormozlanish, sirpanishning soddalashtirilgan modeli va collision holatlari hisobga olinsin.
+
+Agar fizik dvigatel ishlatilsa, uning collision va rigid-body API’larini to‘g‘ri qo‘lla. Fizik dvigatel bilan oddiy transform boshqaruvini bir-biriga qarshi ishlatib, mashinani beqaror qilma.
+
+Mashina boshqaruvi:
+- Kompyuterda W/A/S/D yoki yuqoriga/pastga va chapga/o‘ngga strelkalar.
+- Space — tormoz yoki qo‘l tormozi.
+- E — mashinadan chiqish.
+- Mobil qurilmada alohida boshqaruv tugmalari.
+
+Mashinaga kirish faqat qahramon mashinaga yetarlicha yaqin bo‘lsa amalga oshsin.
+
+# 10. TRAFFIC AI
+
+Shahar yo‘llarida AI boshqaradigan transport vositalari bo‘lsin.
+
+AI mashinalar:
+- Oldindan belgilangan yo‘l tarmog‘i bo‘yicha harakatlansin.
+- Yo‘lning kerakli tomonida yursin.
+- Boshqa transport vositalarini kuzatsin.
+- Oldidagi transportga juda yaqinlashganda sekinlasin.
+- Svetofor holatiga rioya qilsin.
+- To‘qnashuvlarni kamaytirishga harakat qilsin.
+
+Dastlab 5–10 ta transport vositasi bilan ishlaydigan tizim yarat. Keyinchalik avtomobillar sonini sozlash imkonini ber.
+
+AI transporti bir-birining ichidan o‘tib ketmasligi uchun masofa tekshiruvi va to‘qnashuv cheklovlaridan foydalan.
+
+# 11. PIYODALAR VA SHAHAR HAYOTI
+
+Shahar tirik ko‘rinishi uchun piyodalar tizimini qo‘sh.
+
+Piyodalar:
+- Yo‘laklarda yurishi.
+- Belgilangan yo‘llar bo‘ylab harakatlanishi.
+- Bino yoki transport bilan to‘qnashuvni hisobga olishi.
+- O‘yinchi yaqinida ko‘rinishi.
+- Masofadan uzoqlashganda soddalashtirilishi yoki vaqtincha o‘chirilishi.
+
+Birinchi versiyada murakkab individual xatti-harakatlar shart emas. Barqaror navigatsiya, oddiy yurish animatsiyasi va collision tizimi ustuvor bo‘lsin.
+
+# 12. KUN VA TUN TIZIMI
+
+O‘yin dunyosida vaqt almashsin.
+
+Vaqt variantlari:
+- Tong.
+- Kunduz.
+- Quyosh botishi.
+- Tun.
+
+Quyoshning burchagi va yorug‘lik rangi vaqtga qarab o‘zgarsin. Tunda:
+- Ko‘cha chiroqlari yonsin.
+- Mashina faralari ko‘rinsin.
+- Binolarning ayrim derazalari yoritilsin.
+- Osmon va umumiy ranglar o‘zgarsin.
+
+O‘yin sozlamalarida vaqtni avtomatik o‘zgartirish yoki qo‘lda tanlash imkoniyati bo‘lsin.
+
+# 13. OB-HAVO TIZIMI
+
+Kamida quyidagi rejimlarni amalga oshir:
+- Quyoshli.
+- Bulutli.
+- Yomg‘irli.
+
+Yomg‘irda zarrachalar, atmosfera va vizual namlik effektlarini qo‘sh. Keraksiz darajada qimmat real-time reflection ishlatish shart emas.
+
+Ob-havo almashtirilganda:
+- Yoritish moslashsin.
+- Osmon o‘zgarsin.
+- Zarrachalar yoqilsin yoki o‘chirilsin.
+- FPS keskin pasayib ketmasligi nazorat qilinsin.
+
+Haqiqiy ob-havo API’si kerak emas. Birinchi versiyada ob-havo o‘yin ichidagi simulyatsiya bo‘lsin.
+
+# 14. O‘YIN MISSIYALARI
+
+To‘liq ishlaydigan mission manager yarat.
+
+Boshlang‘ich missiyalar:
+
+1. FIRST STEPS
+   Qahramon bilan boshlang‘ich hududni o‘rganish.
+
+2. FIRST RIDE
+   Birinchi mashinaga yaqinlashish va uni boshqarish.
+
+3. CITY EXPLORER
+   Xarita bo‘yicha belgilangan uchta joyga borish.
+
+4. DELIVERY RUN
+   Belgilangan nuqtaga belgilangan vaqt ichida yetib borish.
+
+5. PARKING CHALLENGE
+   Mashinani belgilangan zonaga olib kirib to‘xtatish.
+
+6. TRAFFIC TEST
+   Yo‘lda belgilangan masofani xavfsiz bosib o‘tish.
+
+Har bir missiyada:
+- Nomi.
+- Tavsifi.
+- Boshlanish sharti.
+- Maqsad.
+- Progress.
+- Muvaffaqiyat sharti.
+- Muvaffaqiyatsizlik sharti.
+- Mukofot.
+- Holat: locked, available, active, completed yoki failed.
+
+Missiya maqsadlari 3D dunyodagi koordinatalar bilan bog‘lansin.
+
+Masalan, o‘yinchi belgilangan hududga yetib borsa, missiya avtomatik yangilansin. Faqat “Bajarildi” tugmasini bosish bilan missiya yakunlanib qolmasin.
+
+# 15. IQTISODIYOT VA PUL TIZIMI
+
+O‘yin ichida virtual valyuta bo‘lsin.
+
+O‘yinchi:
+- Missiyalardan pul oladi.
+- Mashinalarni sotib oladi.
+- Yangi transportlarni ochadi.
+- O‘z mablag‘ini HUD orqali kuzatadi.
+
+Barcha iqtisodiy amallar markazlashgan funksiya orqali bajarilsin.
+
+Misol:
+- Boshlang‘ich mablag‘: 1 000 N-Coin.
+- Birinchi oddiy mashina: 0 N-Coin.
+- Sport avtomobili: 5 000 N-Coin.
+- SUV: 3 500 N-Coin.
+
+Bu qiymatlar konfiguratsiyada saqlansin va keyinchalik o‘zgartirilishi mumkin bo‘lsin.
+
+Pul manfiy bo‘lib qolmasin. Bir missiya mukofoti takroran berilib ketmasin. Xaridlar mablag‘ yetarli bo‘lganda amalga oshsin.
+
+Bu faqat o‘yin ichidagi virtual iqtisodiyot bo‘lsin. Haqiqiy pul to‘lovlarini qo‘shma.
+
+# 16. AVTOSALON
+
+Shahar ichida avtosalon yarat.
+
+Avtosalon oynasida:
+- Mashina nomi.
+- 3D ko‘rinishi.
+- Narxi.
+- Maksimal tezligi.
+- Tezlanish darajasi.
+- Boshqaruv xususiyati.
+- Sotib olish tugmasi.
+- Foydalanish tugmasi.
+
+Sotib olinmagan mashinani boshqarib bo‘lmasin. Sotib olingan mashinani keyinchalik tanlash mumkin bo‘lsin.
+
+Agar modelni 3D preview oynasida ko‘rsatish imkoni bo‘lsa, alohida preview sahnasi yoki xavfsiz izolatsiyalangan render komponentidan foydalan.
+
+# 17. XARITA VA NAVIGATSIYA
+
+M — xarita oynasini ochsin.
+
+Xaritada:
+- O‘yinchining joylashuvi.
+- Muhim hududlar.
+- Missiya belgilar.
+- Avtosalon.
+- Park.
+- Uy.
+- Yo‘l tarmog‘i.
+- Belgilangan manzil.
+
+Xaritada manzil tanlanganda navigatsiya belgisi paydo bo‘lsin.
+
+Birinchi versiyada navigatsiya oddiy waypoint yoki yo‘l tarmog‘i asosidagi yo‘nalish ko‘rsatish orqali ishlashi mumkin. To‘liq Google Maps yoki tashqi real dunyo xaritasi integratsiyasi talab qilinmaydi.
+
+Agar to‘liq marshrut topilmasa, o‘yinchi manzilgacha bo‘lgan to‘g‘ri yo‘nalishni ko‘rsatuvchi fallback indikatorni ko‘rsatsin.
+
+# 18. INVENTAR VA O‘YINCHI PROFILI
+
+Profil oynasida:
+- O‘yinchi darajasi.
+- Tajriba ballari.
+- Virtual pul.
+- Bajarilgan missiyalar.
+- Ochilgan avtomobillar.
+- Bosib o‘tilgan masofa.
+- O‘yin ichidagi vaqt.
+
+Inventarda:
+- Olingan mukofotlar.
+- Kalitlar yoki ochilgan obyektlar.
+- Mashina egaligi.
+- Maxsus kosmetik buyumlar uchun kengaytiriladigan tuzilma.
+
+Birinchi versiyada barcha inventar buyumlarini murakkab qilish shart emas, lekin ma’lumotlar tuzilmasi kengaytirish uchun tayyor bo‘lsin.
+
+# 19. UY VA SHAXSIY HUDUD
+
+O‘yinchi boshlang‘ich uyga ega bo‘lsin.
+
+Uyda:
+- Tashqi ko‘rinish.
+- Kirish nuqtasi.
+- Interaktiv belgi.
+- O‘yin progressini saqlash nuqtasi.
+- Keyinchalik yangi uylar sotib olish uchun kengaytiriladigan tizim.
+
+Birinchi bosqichda ichki xonalarni to‘liq modellashtirish shart emas. Ammo uyga kirish va chiqish interaksiyasi ishlaydigan bo‘lsin. Agar ichki makon yaratilmagan bo‘lsa, ichkariga kirgandek ko‘rsatib, bo‘sh yoki buzilgan sahna ko‘rsatma.
+
+# 20. HUD — O‘YIN INTERFEYSI
+
+O‘yin vaqtida zamonaviy, ixcham va chiroyli HUD ko‘rsat.
+
+Yuqori chap:
+- NEXUS CITY logotipi.
+- O‘yinchi holati.
+- Vaqt.
+
+Yuqori o‘ng:
+- Pul.
+- Daraja.
+- Sozlamalar belgisi.
+
+Chap yoki pastki qism:
+- Missiya nomi.
+- Missiya tavsifi.
+- Progress.
+
+Pastki qism:
+- Tezkor boshqaruvlar.
+- Mashina tezligi, agar mashina boshqarilayotgan bo‘lsa.
+
+HUD 3D sahnadan mustaqil HTML interfeys qatlamida bo‘lsin. Kamera harakatlanganda HUD o‘z joyida qolsin.
+
+Mobil ekranlarda interfeys bir-birining ustiga chiqib ketmasin.
+
+# 21. ASOSIY MENYU
+
+O‘yin ochilganda premium start screen chiqsin.
+
+Unda:
+- NEXUS CITY nomi.
+- 3D shahar fon sahnasi.
+- PLAY.
+- CONTINUE.
+- GARAGE.
+- SETTINGS.
+- LANGUAGE.
+- CREDITS.
+
+PLAY bosilganda o‘yin boshlansin.
+
+CONTINUE bosilganda saqlangan progress bo‘lsa yuklansin. Saqlangan progress bo‘lmasa, yangi o‘yin boshlash imkoniyati berilsin.
+
+GARAGE o‘yinchining ochilgan mashinalarini ko‘rsatsin.
+
+SETTINGS ishlaydigan sozlamalar oynasini ochsin.
+
+O‘yin menyusi tugmalari faqat dekoratsiya bo‘lmasin. Har biri aniq ishlaydigan harakatga ega bo‘lsin.
+
+# 22. SOZLAMALAR
+
+Quyidagilarni sozlash mumkin bo‘lsin:
+- Master volume.
+- Musiqa ovozi.
+- Effektlar ovozi.
+- Mouse sensitivity.
+- Camera sensitivity.
+- Graphics quality: Low, Medium, High.
+- Shadows on/off.
+- FPS counter on/off.
+- Vibration, qurilma qo‘llab-quvvatlasa.
+- Language.
+- Light/Dark UI mode.
+- Touch control sensitivity.
+
+Ovoz fayllari mavjud bo‘lmasa, ishlamaydigan ovoz tugmalarini ko‘rsatma yoki audio imkoniyatlarini o‘chirilgan holatda tushuntir.
+
+Sozlamalar o‘zgarganda tegishli tizimlarga darhol qo‘llansin.
+
+# 23. UCH TILLI TIZIM
+
+Barcha foydalanuvchi interfeysi matnlarini tarjima tizimiga birlashtir.
+
+Uzbek:
+- O‘ynash
+- Davom ettirish
+- Sozlamalar
+- Garaj
+- Xarita
+- Missiyalar
+- Inventar
+- Saqlash
+- Orqaga
+
+English:
+- Play
+- Continue
+- Settings
+- Garage
+- Map
+- Missions
+- Inventory
+- Save
+- Back
+
+Russian:
+- Играть
+- Продолжить
+- Настройки
+- Гараж
+- Карта
+- Задания
+- Инвентарь
+- Сохранить
+- Назад
+
+Tarjimalar alohida fayllarda saqlansin. Kod bo‘ylab interfeys matnlarini takroran yozma. Foydalanuvchi tilni o‘zgartirsa, butun interfeys yangilansin.
+
+# 24. LIGHT MODE VA DARK MODE
+
+Interfeys uchun ikkita to‘liq rejim yarat.
+
+Dark Mode:
+- Qoramtir fon.
+- Neon ko‘k yoki binafsha aksentlar.
+- Yaxshi o‘qiladigan oq matn.
+- Shaffof, lekin kontrasti yetarli panellar.
+
+Light Mode:
+- Och kulrang yoki oq fon.
+- To‘q matn.
+- Toza va zamonaviy kartalar.
+- O‘qilishi oson tugmalar.
+
+Bu rejimlar asosan UI’ga ta’sir qilsin. 3D dunyo yoritilishi faqat o‘yin ichidagi kun-tun tizimiga bog‘liq bo‘lsin.
+
+# 25. GRAFIK SIFAT VA OPTIMIZATSIYA
+
+Ustuvorlik: barqarorlik, boshqaruv va o‘ynalish.
+
+Quyidagilarni amalga oshir:
+- InstancedMesh orqali takrorlanuvchi obyektlarni optimallashtirish.
+- Geometriya va materiallarni qayta ishlatish.
+- Uzoq obyektlar uchun Level of Detail.
+- Frustum culling.
+- Uzoq hududlarni bosqichma-bosqich yuklash imkoniyati.
+- O‘yinchi yaqinidagi hududlarni ustuvor renderlash.
+- Keraksiz React re-render’larini kamaytirish.
+- 3D animatsiyalarni barqaror update loop orqali boshqarish.
+- FPS monitoring.
+- Resize va orientation o‘zgarishlariga javob berish.
+- Obyektlar olib tashlanganda GPU resurslarini tozalash.
+- Sahna yopilganda event listener’larni olib tashlash.
+
+Shaharni haddan tashqari ko‘p alohida mesh bilan to‘ldirma. Oddiy binolar uchun instancing yoki umumiy geometriyadan foydalan.
+
+Realistik ko‘rinish uchun barcha narsaga og‘ir tekstura va dinamik soyalar qo‘llash shart emas.
+
+# 26. O‘YIN HOLATI VA MA’LUMOTLAR ARXITEKTURASI
+
+O‘yin holatini markazlashgan va tiplangan tizim orqali boshqar.
+
+Kamida quyidagi ma’lumotlar bo‘lsin:
+- PlayerState.
+- VehicleState.
+- MissionState.
+- EconomyState.
+- InventoryState.
+- SettingsState.
+- WorldState.
+- SaveState.
+
+O‘yinchi koordinatalari, mashina holati, pul va missiya progressi bir-biriga zid bo‘lib qolmasin.
+
+Barcha iqtisodiy amallar va missiya mukofotlari yagona qoidalar orqali amalga oshirilsin.
+
+3D sahna komponentlari bilan HTML UI o‘rtasida aniq ma’lumot almashish mexanizmini yarat.
+
+Har bir komponent barcha o‘yin holatini mustaqil ravishda takroran saqlamasin.
+
+# 27. SAVE / LOAD TIZIMI
+
+O‘yin progressini brauzerda saqlash imkonini ber.
+
+Saqlanadigan ma’lumotlar:
+- O‘yinchi darajasi va tajribasi.
+- Pul.
+- Sotib olingan mashinalar.
+- Tanlangan mashina.
+- Missiya holatlari.
+- O‘yin sozlamalari.
+- Til.
+- Oxirgi xavfsiz joylashuv.
+- O‘yin vaqti.
+
+Talablar:
+- Save Game tugmasi.
+- Continue tugmasi.
+- Avtomatik saqlash.
+- Saqlash xatolari uchun xabar.
+- Buzilgan save ma’lumotlarini tekshirish.
+- Save versiyasi va migratsiya uchun kengaytiriladigan tuzilma.
+- Reset Progress tasdiqlash oynasi.
+
+`localStorage` yoki IndexedDB ishlatilganda JSON ma’lumotlarini validatsiya qil. Noto‘g‘ri qiymatlar sabab o‘yin butunlay ochilmay qolmasin.
+
+Mahalliy saqlash bir qurilmadagi brauzer uchun mo‘ljallangan bo‘lsin. Bulutli sinxronlashni haqiqiy backend bo‘lmasa mavjud deb ko‘rsatma.
+
+# 28. AUDIO TIZIMI
+
+Ovoz tizimini kengaytiriladigan qilib yarat.
+
+Qo‘llab-quvvatlanadigan audio kategoriyalari:
+- UI click.
+- UI notification.
+- Footsteps.
+- Engine sound.
+- Braking sound.
+- Ambient city sound.
+- Mission complete.
+
+Haqiqiy audio assetlar bo‘lmasa, ularni tasodifiy fayl nomlari bilan import qilib loyihani buzma. Mavjud bo‘lmagan audio uchun audio interfeysini o‘chirilgan holatda saqla yoki litsenziyasi mos assetlar qo‘shish bo‘yicha ko‘rsatma ber.
+
+Brauzer autoplay cheklovlarini hisobga ol. Ovoz foydalanuvchi interaksiyasidan keyin ishga tushsin.
+
+# 29. COLLISION VA FIZIKA
+
+Quyidagi obyektlar uchun collision tizimini qo‘llashni ko‘rib chiq:
+- O‘yinchi.
+- Mashinalar.
+- Binolar.
+- Devorlar.
+- Yo‘l chetlari.
+- Interaktiv obyektlar.
+
+O‘yinchi devor ichiga kirib ketmasin. Mashina binoning ichidan o‘tib ketmasin. Obyektlar collision hisobida haddan tashqari katta yoki kichik bo‘lib qolmasin.
+
+Har bir dekorativ obyektga murakkab fizikani qo‘shma. Zarur bo‘lgan obyektlargagina fizik collider qo‘sh.
+
+Fizikani hisoblash chastotasi va render chastotasi o‘rtasida barqaror aloqani saqla.
+
+# 30. INTERAKSIYA TIZIMI
+
+O‘yinchi muhim obyektga yaqinlashganda ekranda kontekstli xabar paydo bo‘lsin.
+
+Misollar:
+- “E — Mashinaga kirish”.
+- “F — Avtosalonni ochish”.
+- “F — Missiyani boshlash”.
+- “F — Uyga kirish”.
+
+Mobil qurilmada mos interaksiya tugmasi ko‘rsatilsin.
+
+Interaksiya faqat kerakli masofada va to‘g‘ri obyekt bilan bajarilsin. Bir vaqtda bir nechta obyekt interaksiya talab qilsa, eng yaqin va ustuvor obyekt tanlansin.
+
+# 31. XAVFSIZLIK VA BARQARORLIK
+
+- Foydalanuvchi kiritgan matnni xavfsiz ko‘rsat.
+- HTML matnini nazoratsiz bajariladigan kodga aylantirma.
+- `eval` ishlatma.
+- Maxfiy kalitlarni frontend ichiga joylashtirma.
+- Tashqi URL va assetlarni tekshir.
+- Ishonchsiz ma’lumotlarni validatsiya qil.
+- Brauzer xatolari uchun tushunarli fallback yarat.
+- Har bir asinxron jarayonda xato holatini boshqar.
+- Bir nechta marta bosish natijasida xarid yoki mukofot takroran bajarilib ketmasin.
+
+# 32. LOYIHA PAPKALARI
+
+Loyihani quyidagi kabi tartibli tuz:
+
+src/
+  app/
+    App.tsx
+    providers.tsx
+  game/
+    GameCanvas.tsx
+    GameWorld.tsx
+    GameLoop.ts
+    gameConfig.ts
+  player/
+    Player.tsx
+    PlayerController.ts
+    PlayerCamera.ts
+  vehicles/
+    Vehicle.tsx
+    VehicleController.ts
+    VehiclePhysics.ts
+    TrafficAI.ts
+  world/
+    CityWorld.tsx
+    Roads.tsx
+    Buildings.tsx
+    Lighting.tsx
+    Weather.tsx
+    DayNightCycle.ts
+  missions/
+    MissionManager.ts
+    missionDefinitions.ts
+  economy/
+    EconomyManager.ts
+  map/
+    CityMap.tsx
+    Navigation.ts
+  ui/
+    MainMenu.tsx
+    HUD.tsx
+    Settings.tsx
+    Garage.tsx
+    MissionsPanel.tsx
+    Inventory.tsx
+  state/
+    gameStore.ts
+    settingsStore.ts
+  persistence/
+    saveGame.ts
+    saveValidation.ts
+  i18n/
+    index.ts
+    uz.ts
+    en.ts
+    ru.ts
+  types/
+    game.ts
+  utils/
+    collision.ts
+    performance.ts
+  styles/
+    global.css
+
+Bu namunaviy arxitektura. Zaruratga qarab fayllarni qo‘shish mumkin, ammo modullar orasidagi vazifalar aniq bo‘lsin.
+
+# 33. XATOLARNI ANIQLASH VA TESTLASH
+
+Loyihani yozgandan keyin ish tugadi deb hisoblama.
+
+Quyidagi tekshiruvlarni bajar:
+- TypeScript type-check.
+- Production build.
+- Lint, agar loyiha konfiguratsiyasida mavjud bo‘lsa.
+- Buzilgan importlarni tekshirish.
+- Noto‘g‘ri React hook ishlatilishini tekshirish.
+- Three.js obyektlarini tozalash.
+- Mobil ekran o‘lchamlarini tekshirish.
+- Klaviatura boshqaruvlarini tekshirish.
+- Touch boshqaruvlarini tekshirish.
+- Mashinaga kirish va undan chiqishni tekshirish.
+- Collision tizimini tekshirish.
+- Missiya boshlanishi va yakunlanishini tekshirish.
+- Pul va xarid tizimini tekshirish.
+- Save/load tizimini tekshirish.
+- Uchta tilni tekshirish.
+- Light/Dark rejimlarini tekshirish.
+
+Console xatolarini e’tiborsiz qoldirma. O‘yin ishlashiga xalaqit beradigan xatolarni tuzat.
+
+Agar biror testni haqiqiy brauzerda bajarish imkoniyati bo‘lmasa, test bajarilgan deb da’vo qilma. Bunday holatda bajarilmagan testni aniq ko‘rsat.
+
+# 34. ISHLASH BOSQICHLARI
+
+Loyihani quyidagi ketma-ketlikda ishlab chiq.
+
+## Stage 1 — Playable Core
+
+Avval quyidagilarni to‘liq ishlat:
+- React/Vite loyihasi.
+- Three.js sahnasi.
+- Kichik shahar.
+- O‘yinchi.
+- Kamera.
+- W/A/S/D boshqaruvi.
+- Mobil joystick.
+- Mashinaga kirish va chiqish.
+- Oddiy boshqariladigan mashina.
+- Collision.
+- Boshlang‘ich HUD.
+
+Bu bosqich ishlamasdan keyingi bosqichga o‘tma.
+
+## Stage 2 — City Systems
+
+- Yangi hududlar.
+- Binolar va yo‘llar.
+- Traffic AI.
+- Piyodalar.
+- Kun-tun.
+- Ob-havo.
+
+## Stage 3 — Gameplay
+
+- Missiyalar.
+- Pul tizimi.
+- Avtosalon.
+- Xarita.
+- Interaksiyalar.
+- Profil va inventar.
+
+## Stage 4 — UI & Persistence
+
+- Asosiy menyu.
+- Settings.
+- Uchta til.
+- Light/Dark.
+- Save/load.
+- Continue.
+
+## Stage 5 — Optimization & Validation
+
+- FPS optimizatsiyasi.
+- Mobil tekshiruv.
+- Type-check.
+- Production build.
+- Xatolarni tuzatish.
+- Yakuniy ishga tushirish yo‘riqnomasi.
+
+# 35. GOOGLE AI STUDIO UCHUN ISH TARTIBI
+
+Agar barcha loyihani bir javobda yaratish imkoni bo‘lmasa, vazifani bosqichlarga ajrat.
+
+Har bir bosqichda:
+1. Avval mavjud fayllarni tekshir.
+2. Oldingi ishlaydigan funksiyalarni saqla.
+3. Faqat zarur o‘zgarishlarni kirit.
+4. Importlar va dependency’larni tekshir.
+5. TypeScript xatolarini tuzat.
+6. Build’ni tekshir.
+7. Qaysi funksiyalar haqiqatan ishlashini ko‘rsat.
+8. Keyingi bosqichga o‘t.
+
+Oldingi kodni ko‘rmasdan butun loyihani qaytadan yozma. Ishlayotgan funksiyalarni yo‘qotma. Fayllar soni ko‘pligi uchun funksiyalarni tasodifiy o‘chirib yuborma.
+
+Agar tashqi 3D model, tekstura yoki audio fayli kerak bo‘lsa, undan foydalanishning aniq usulini ko‘rsat. Mavjud bo‘lmagan faylga import yozma.
+
+# 36. YAKUNIY NATIJA TALABLARI
+
+Yakuniy loyihada quyidagilar bo‘lishi kerak:
+
+- Ishlaydigan React + TypeScript loyihasi.
+- To‘liq 3D renderlash.
+- Boshqariladigan o‘yinchi.
+- Boshqariladigan avtomobil.
+- O‘yinchi va transport o‘rtasidagi interaksiya.
+- Kichik, lekin mazmunli 3D shahar.
+- Missiya tizimi.
+- Virtual iqtisodiyot.
+- Avtosalon.
+- Navigatsiya.
+- Uchta til.
+- Light/Dark UI.
+- Telefon va kompyuter uchun boshqar
